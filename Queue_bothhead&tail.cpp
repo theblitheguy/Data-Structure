@@ -2,18 +2,18 @@
 #include<iostream>
 #define maxsize 3
 using namespace std;
-class queue
+class Queue
 {
     private:
     int front,rear,d[maxsize];
     public:
-    queue(){front=0;rear=-1;}
+    Queue(){front=0;rear=-1;}
     void display();
     void enqueue();
     void dequeue();
     void exit();    
 };
-void queue::enqueue()
+void Queue::enqueue()
 {
     if(rear==maxsize-1)
     {
@@ -28,7 +28,7 @@ void queue::enqueue()
        d[rear]=dat; 
     }
 }
-void queue::dequeue()
+void Queue::dequeue()
 {
     if(front>rear)
     {
@@ -40,7 +40,7 @@ void queue::dequeue()
         front++;
     }
 }
-void queue::display()
+void Queue::display()
 {
     for(int i=front;i<=rear;i++)
     {
@@ -50,7 +50,7 @@ void queue::display()
 int main()
 {
     int ch;
-    queue s1;
+    Queue s1;
     cout<<"1.Display\n2.Enqueue\n3.Dequeue\n4.Exit"<<endl;
     while(1)
     {
